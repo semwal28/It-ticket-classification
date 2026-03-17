@@ -18,8 +18,8 @@ def clean_text(text):
 
 # 2. Load the Saved "Brain"
 print("🔄 Loading the AI model and translator...")
-model = joblib.load(r'C:\Users\semwa\OneDrive\Desktop\IT-TICKET CLASSIFICATION\models\ticket_classifier.pkl')
-tfidf = joblib.load(r'C:\Users\semwa\OneDrive\Desktop\IT-TICKET CLASSIFICATION\models\vectorizer.pkl')
+model = joblib.load('C:\\Users\\semwa\\OneDrive\\Desktop\\IT-TICKET CLASSIFICATION\\models\\ticket_classifier.pkl')
+tfidf = joblib.load('C:\\Users\\semwa\\OneDrive\\Desktop\\IT-TICKET CLASSIFICATION\\models\\vectorizer.pkl')
 
 def classify_new_ticket():
     print("\n--- IT Ticket Classifier ---")
@@ -43,7 +43,3 @@ def classify_new_ticket():
 
 if __name__ == "__main__":
     classify_new_ticket()
-        
-
-
-

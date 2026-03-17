@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report, accuracy_score
 def train_model():
     print("🚀 Loading corrected & cleaned data...")
     # Load the file created by your updated preprocess.py
-    df = pd.read_csv(r'C:\Users\semwa\OneDrive\Desktop\IT-TICKET CLASSIFICATION\data\processed\cleaned_tickets.csv')
+    df = pd.read_csv('C:\\Users\\semwa\\OneDrive\\Desktop\\IT-TICKET CLASSIFICATION\\data\\processed\\cleaned_tickets.csv')
     
     # Remove any rows where cleaning might have failed
     df = df.dropna(subset=['cleaned_text'])
@@ -40,8 +40,8 @@ def train_model():
     print(classification_report(y_test, y_pred))
 
     # 5. Saving the Model and Translator
-    joblib.dump(model, r'C:\Users\semwa\OneDrive\Desktop\IT-TICKET CLASSIFICATION\models\ticket_classifier.pkl')
-    joblib.dump(tfidf, r'C:\Users\semwa\OneDrive\Desktop\IT-TICKET CLASSIFICATION\models\vectorizer.pkl')
+    joblib.dump(model, 'C:\\Users\\semwa\\OneDrive\\Desktop\\IT-TICKET CLASSIFICATION\\models\\ticket_classifier.pkl')
+    joblib.dump(tfidf, 'C:\\Users\\semwa\\OneDrive\\Desktop\\IT-TICKET CLASSIFICATION\\models\\vectorizer.pkl')
     print("\n💾 Model saved! Ready for Phase 5.")
 
 if __name__ == "__main__":
